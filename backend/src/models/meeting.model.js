@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const meetingSchema = new mongoose.Schema({
   user_id: {
-  type: mongoose.Schema.Types.ObjectId, // store MongoDB _id
+  type: mongoose.Schema.Types.ObjectId, 
   ref: "User",
   required: true,
 },

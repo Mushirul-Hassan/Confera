@@ -18,14 +18,14 @@ router.route("/create_meeting").post(authenticate, createMeeting);
 router.route("/add_to_history").post(authenticate, addToHistory);
 router.route("/get_all_history").get(authenticate, getUserHistory);
 
-// 🚪 Logout
+
 router.route("/logout").get( (req, res) => {
   res.clearCookie("token");
   res.status(200).json({ message: "Logged out successfully" });
 });
 
 
-// 👤 Get current user
+
 router.route("/me").get (authenticate, (req, res) => {
   res.status(200).json({ message: `Welcome back, User ID: ${req.user.id}` });
 });

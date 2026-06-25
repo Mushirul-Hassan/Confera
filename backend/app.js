@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import { createServer } from "http";
-import { Server } from "socket.io";
+
 
 import cors from "cors";
 import { connectToSocket } from "./src/socket/socketManager.js";
@@ -13,7 +13,7 @@ dotenv.config();
 
 const app = express();
 const server = createServer(app);
-const io = connectToSocket(server);
+connectToSocket(server);
 
  app.use(cors({
   origin: ["http://localhost:3000", "http://localhost:5173", "https://confera-vajr.onrender.com"],

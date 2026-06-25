@@ -80,7 +80,7 @@ export const AuthProvider = ({ children }) => {
 
     const data = {
         token,
-        isLoading, // --- FIX: Expose the loading state to other components ---
+        isLoading, 
         addToUserHistory,
         getHistoryOfUser,
         handleRegister,
